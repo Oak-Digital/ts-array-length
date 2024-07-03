@@ -2,10 +2,21 @@
   "name": "ts-array-length",
   "version": "0.1.2",
   "description": "TypeScript utils for dealing with TypeScript arrays",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/esm/index.d.ts",
+      "node": "./dist/cjs/index.js"
+    }
+  },
   "scripts": {
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
     "test": "vitest",
     "test-type": "vitest typecheck"
   },
@@ -23,7 +34,7 @@
   "license": "MIT",
   "devDependencies": {
     "prettier": "^2.8.4",
-    "typescript": "^5.0.0-beta",
+    "typescript": "^5.5.3",
     "vitest": "^0.28.5"
   }
 }
