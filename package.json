@@ -1,6 +1,6 @@
 {
   "name": "@oak-digital/ts-array-length",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "TypeScript utils for dealing with TypeScript arrays",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
