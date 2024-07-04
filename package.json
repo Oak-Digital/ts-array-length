@@ -1,6 +1,6 @@
 {
   "name": "ts-array-length",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "TypeScript utils for dealing with TypeScript arrays",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -16,6 +16,7 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc -w",
+    "release": "bumpp",
     "test": "vitest",
     "test-type": "vitest typecheck"
   },
@@ -32,6 +33,7 @@
   "author": "uhyo <uhyo@uhy.ooo>",
   "license": "MIT",
   "devDependencies": {
+    "bumpp": "^9.4.1",
     "prettier": "^2.8.4",
     "typescript": "^5.5.3",
     "vitest": "^1.6.0"
